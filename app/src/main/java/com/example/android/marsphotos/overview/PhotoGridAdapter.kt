@@ -22,13 +22,13 @@ class PhotoGridAdapter : ListAdapter<MarsPhoto,
 
         fun bind(MarsPhoto: MarsPhoto) {
 
-            //binding.photo = MarsPhoto
-            //binding.executePendingBindings()
-            Glide.with(binding.root.context)
-                .load(MarsPhoto.imgSrcUrl)
-                .placeholder(R.drawable.loading_animation)
-                .error(R.drawable.ic_broken_image)
-                .into(binding.marsImage)
+            binding.photo = MarsPhoto
+            binding.executePendingBindings()
+            //Glide.with(binding.root.context)
+              //  .load(MarsPhoto.imgSrcUrl)
+                //.placeholder(R.drawable.loading_animation)
+                //.error(R.drawable.ic_broken_image)
+                //.into(binding.marsImage)
 
         }
 
